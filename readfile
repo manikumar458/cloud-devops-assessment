@@ -1,5 +1,12 @@
 This project demonstrates deploying a simple web application in a cloud-based Kubernetes cluster with monitoring using Prometheus .
 Steps to Deploy :-
+
+Prerequisites - 
+- Install Terraform
+- Install kubectl 
+- Install Docker 
+- Install Prometheus
+
 Provision Cloud Infrastructure:
 Bash
 Copy code
