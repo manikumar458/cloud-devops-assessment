@@ -1,0 +1,25 @@
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelector: {}
+    podMonitorSelector: {}
+    resources:
+      requests:
+        memory: "400Mi"
+        cpu: "200m"
+      limits:
+        memory: "800Mi"
+        cpu: "500m"
+grafana:
+  enabled: true
+  adminPassword: "admin123"
+  dashboardsConfigMaps:
+    default.yaml: |
+      apiVersion: 1
+      providers:
+        - name: 'Kubernetes'
+          orgId: 1
+          folder: ''
+          type: file
+          options:
+            path: /var/lib/grafana/dashboards
+
